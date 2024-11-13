@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+    background: #F5F7FA;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .items ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .items ul {
+    cursor: pointer;
+}
+
+.navbar .items ul li:hover {
+    color: #007700;
+    text-decoration: underline;
+}
+
+.navbar .menubar img {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+button {
+    margin-left: 10px;
+    padding: 7px 15px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 1px 1px 2px;
+}
+
+.navbar .auth {
+    display: flex;
+}
+
+.navbar .auth .login,
+.navbar .auth .signup:hover,
+.greenbg:hover {
+    color: green;
+    background: white;
+}
+
+.navbar .auth .login:hover,
+.navbar .auth .signup,
+.greenbg {
+    color: white;
+    background: green;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+    background: #F5F7FA;
+}
+
+.hero .content h1 {
+    font-size: 55px;
+}
+
+p {
+    color: gray;
+}
+
+.hero .content p,
+.client p,
+.community p,
+.pixelgrade p,
+.tips p {
+    margin: 15px auto;
+}
+
+.hero .content h1 span,
+.data .text span {
+    color: #09be09;
+}
+
+.hero .dot {
+    position: absolute;
+    bottom: 0px;
+}
+
+.client,
+.community {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.client h2,
+.community h2,
+.pixelgrade h2,
+.data h2,
+.tips h2 {
+    font-size: 30px;
+}
+
+.client div,
+.community .infoContainer,
+.pixelgrade,
+.data .stat .item,
+.tips {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 80px;
+    gap: 10px;
+}
+
+.community .infoContainer .info {
+    padding: 0px 50px;
+}
+
+.pixelgrade .content,
+.tips .content {
+    width: 40%;
+    gap: 10px;
+    margin: 10px;
+}
+
+.tips img {
+    width: 80%;
+}
+
+.data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background: #F5F7FA;
+}
+
+.data .stat {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    gap: 30px;
+}
+
+.data .stat img {
+    width: 30px;
+}
+
+.getDemo {
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.getDemo h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #263238;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+footer .details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .details .social img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer .details .social img:hover {
+    background: green;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+footer .sitemap {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+}
+
+footer .sitemap h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+footer .sitemap li {
+    color: #F5F7FA;
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+footer .sitemap li:hover {
+    text-decoration: underline;
+    color: #06ff06;
+}
+
+footer input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d6dbdd;
+    color: black;
+}
+
+footer .uptodate {
+    position: relative;
+}
+
+footer .uptodate img {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: black;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .navbar {
+        height: auto;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .items {
+        display: none;
+    }
+
+    .items ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .menubar img {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hero .content h1 {
+        font-size: 36px;
+    }
+
+    .hero .content p {
+        font-size: 16px;
+    }
+
+    .community .infoContainer,
+    .pixelgrade,
+    .tips {
+        flex-direction: column-reverse;
+        padding: 0 40px;
+    }
+
+    .data {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .pixelgrade .content,
+    .tips .content {
+        width: 80%;
+    }
+
+    .getDemo h1 {
+        font-size: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+    footer h4 {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+    img {
+        max-width: 300px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .items ul {
+        gap: 5px;
+    }
+
+
+    .auth button {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .hero .content h1 {
+        font-size: 30px;
+    }
+
+    .hero .content p {
+        font-size: 14px;
+    }
+
+    .client div {
+        padding: 0px 20px;
+    }
+
+    .client div img,
+    .community .infoContainer .info img,
+    .data .stat img {
+        width: 30px;
+    }
+
+    .data .stat {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pixelgrade .content,
+    .tips .content {
+        width: 100%;
+    }
+
+}
