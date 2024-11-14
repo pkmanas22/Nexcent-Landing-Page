@@ -103,6 +103,20 @@ p {
     color: gray;
 }
 
+.hero .image img {
+    position: relative;
+    /* bottom: -70px; */
+    animation-name: heroImageAnimation;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+@keyframes heroImageAnimation {
+    0% {
+        transform: translateY(70px)
+    }
+}
+
 .hero .content p,
 .client p,
 .community p,
@@ -147,6 +161,11 @@ p {
     gap: 10px;
 }
 
+.client img:hover {
+    transform: scale(1.3);
+    transition: transform 0.2s ease-in-out;
+}
+
 .community .infoContainer .info {
     padding: 0px 50px;
 }
@@ -160,6 +179,11 @@ p {
 
 .tips img {
     width: 80%;
+}
+
+.pixelgrade img:hover,
+.tips img:hover {
+    transform: rotate3d(1, 1, 0.5, -30deg);
 }
 
 .data {
@@ -211,6 +235,7 @@ footer .details .social img {
 }
 
 footer .details .social img:hover {
+    transform: scale(1.1);
     background: green;
     border-radius: 50%;
     transition: background 0.3s ease-in-out;
